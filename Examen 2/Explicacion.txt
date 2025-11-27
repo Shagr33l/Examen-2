@@ -1,0 +1,21 @@
+Explicación del Algoritmo Divide & Conquer (Divide y vencerás)
+
+División del problema:
+El arreglo se divide en dos mitades, cada mitad se procesa recursivamente para encontrar su máximo.
+Esto aplica el principio de "divide y vencerás", donde un problema grande se divide en subproblemas más pequeños
+que se resuelven de manera independiente.
+
+Caso base:
+El caso base ocurre cuando el subarreglo contiene un único elemento (inicio == fin). 
+En ese momento no se puede dividir más y ese elemento es el máximo del subarreglo.
+Por ejemplo, en factorial (n!) el caso base sería (0!).
+
+Conquista y combinación:
+Una vez divididas las mitades, se obtiene el máximo de cada una mediante llamadas recursivas.
+Para combinar el resultado, se compara el máximo de la mitad izquierda con
+el de la derecha y se regresa el mayor.
+
+Complejidad temporal:
+La recurrencia del algoritmo es T(n) = 2T(n/2) + O(1). 
+Aplicando el Teorema Maestro, la complejidad temporal total del algoritmo es O(n). 
+La complejidad espacial es O(log n) por la profundidad de la recursión.
