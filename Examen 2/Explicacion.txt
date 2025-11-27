@@ -19,3 +19,17 @@ Complejidad temporal:
 La recurrencia del algoritmo es T(n) = 2T(n/2) + O(1). 
 Aplicando el Teorema Maestro, la complejidad temporal total del algoritmo es O(n). 
 La complejidad espacial es O(log n) por la profundidad de la recursión.
+
+
+Pseudocódigo:
+
+iniciar funcion maxRecursivo(arreglo, inicio, fin):
+    si inicio == fin entonces
+        regresar arreglo[inicio]
+    mitad = (inicio + fin) / 2
+    maxIzquierdo = maxRecursivo(arreglo, inicio, mitad)
+    maxDerecho = maxRecursivo(arreglo, mitad + 1, fin)
+    si maxIzquierdo > maxDerecho entonces
+        regresar maxIzquierdo
+    si no
+        regresar maxDerecho
